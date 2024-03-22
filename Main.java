@@ -39,13 +39,13 @@ class Event extends GameObject {
 
 // Parent class representing the basic functionality of a survival game
 abstract class SurvivalGame {
-    protected static final int MAX_HEALTH = 100;
-    protected static final int MAX_DAYS = 10;
-    protected static final int MAX_EVENT_CHANCE = 30;
+    protected static int MAX_HEALTH = 100;
+    protected static int MAX_DAYS = 10;
+    protected static int MAX_EVENT_CHANCE = 30;
 
     protected int health = MAX_HEALTH;
     protected int daysSurvived = 0;
-
+  //Arrays that store outcomes and possibilities
     protected final GameObject[] scavengingResults;
     protected final GameObject[] randomEvents;
 
@@ -134,6 +134,7 @@ abstract class SurvivalGame {
     public void startGame() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
+        health = MAX_HEALTH;
 
         System.out.println("Welcome to Survival Game!");
 
@@ -171,20 +172,22 @@ abstract class SurvivalGame {
 class EasySurvivalGame extends SurvivalGame {
     public EasySurvivalGame() {
         super(); // Call the constructor of the superclass to initialize arrays
+        
     }
 }
 
 // Subclass representing medium difficulty level
 class MediumSurvivalGame extends SurvivalGame {
     public MediumSurvivalGame() {
-        super(); // Call the constructor of the superclass to initialize arrays
+        MAX_HEALTH = 50;
+        
     }
 }
 
 // Subclass representing hard difficulty level
 class HardSurvivalGame extends SurvivalGame {
     public HardSurvivalGame() {
-        super(); // Call the constructor of the superclass to initialize arrays
+        MAX_HEALTH = 20;
     }
 }
 
