@@ -7,6 +7,10 @@
 //and health is lost each day by defualt so the choice to rest needs to be used wisely.
 //If the program ends without the congragulations message, the user has died.
 
+//This project allowed me to learn how time consuming it is to make a game in java. Simple errors can result in unnecessary debugging.
+//I also learned how to put together everything that we have learned in the year and make a product that puts almost every unit into use.
+//Lastly, I learned how to make a recursive method, since I did not really know how to before hand.
+
 //import statements
 import java.util.Random;
 import java.util.Scanner;
